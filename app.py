@@ -16,7 +16,7 @@ while True:
 
 		try: distance = d if len(d) and int(d) else 20
 		except ValueError:
-			print('Please enter an integer!')
+			print('Please enter an integer!\n')
 			continue
 
 		match input('W - Forward\nA - Left\nS - Backward\nD - Right\nI - Upwards\nK - Downwards\nC - Clockwise\nV - Counterclockwise\nL - Land\nT - Takeoff\nS - STOP\n-> ').lower():
@@ -42,4 +42,4 @@ while True:
 				tello.takeoff()
 			case 's':
 				tello.emergency()
-	except: break
+	except KeyboardInterrupt: break
